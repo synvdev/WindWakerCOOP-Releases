@@ -1,16 +1,19 @@
-# WindWakerCOOP-PC
+# WindWaker COOP
 
 **WindWaker COOP** is online co-op for **two to four players** for The Legend of Zelda: The Wind Waker HD on Windows.
 It is a modified version of the native PC port [ZeldaWWHDRecomp](https://github.com/ZeldaWWHDRecomp/ZeldaWWHDRecomp).
 
-Every player sees the others' Links, with their animations, equipment and tunic colour. The world is shared:
-- story progress, switches, chests, keys and visited rooms;
-- enemies (tested mainly in Dragon Roost Cavern);
-- carried and broken objects;
-- pigs and pickups.
+Play the whole adventure together, from Outset Island to the final battle with Ganondorf. Every player sees the
+others' Links, with their animations, equipment and tunic colour, and the world is shared:
+- story progress, switches, puzzles, doors, chests, keys and visited rooms;
+- items and rupees: one shared wallet, and every permanent reward reaches every player;
+- enemies, which fight every player, and their kills, drops and weapons;
+- **every main boss**, including Ganondorf: hits, health, phases and the defeat are shared, and each player gets their
+  own ending, heart container and exit;
+- carried and broken objects, pigs, cut grass and bushes.
 
-**This is an experimental Public Alpha.** It is not stable and it is not bug-free. Expect crashes, sync problems and
-rough edges, back up your save, and please report what you find (see "Reporting a bug").
+**v1.0.0 is the first official release.** It is a big step up from the Public Alpha, but it is not bug-free: back up
+your save, and please report what you find (see "Reporting a bug").
 
 Downloads are on the **[Releases](../../releases)** page. This repository holds only this README, the license and the
 release files. It contains no game.
@@ -19,19 +22,21 @@ release files. It contains no game.
 
 | Release | What it is | Co-op protocol |
 |---|---|---|
-| **0.5.0-coop.6** (Public Alpha) | **The current release.** Crash fixes from the second playtest, carried objects, pigs and household objects shared, Teleport to Player anywhere in the world, World Warp, Catch Up. | **5** |
-| 0.5.0-coop.5 (prerelease) | The test build of the second playtest. | 5 |
-| 0.5.0-coop.4 (Alpha) | The first public Alpha. | 4 |
+| **1.0.0** | **The current release, the first official one.** Every main boss synchronized up to Ganondorf, shared items and rupees, enemies fighting every player, cut grass and bushes, many fixes. | **5** |
+| 0.5.0-coop.6 (Public Alpha) | The last Alpha. Kept for history. | 5 |
+| 0.5.0-coop.5 (prerelease) | The test build of the second playtest. Kept for history. | 5 |
+| 0.5.0-coop.4 (Alpha) | The first public Alpha. Kept for history. | 4 |
 
 **Everyone in a game must use exactly the same release.** A different release is refused by the host as a
-"different game build", even when the protocol number is the same, as for 0.5.0-coop.5 and 0.5.0-coop.6. The
-launcher shows the release and the protocol on its **Install** tab.
+"different game build", even when the protocol number is the same, as for 0.5.0-coop.6 and 1.0.0. The launcher
+shows the release and the protocol on its **Install** tab.
 
-**Already playing 0.5.0-coop.4 or 0.5.0-coop.5?** There are two ways:
-- **Easiest and safest:** a fresh install of 0.5.0-coop.6 into a new folder (see "First-time setup"). Then copy your old
-  folder's `data\save` into the new folder's `data`, with the game closed.
-- **Or use the update:** open the launcher's **Updates** tab and press **Install**. Afterwards, press **Settings > Run
-  game setup / repair once** (see "Updates" below).
+**Already playing an Alpha release?**
+- **0.5.0-coop.6:** open the launcher's **Updates** tab and press **Install**. Your game files, saves and settings stay
+  (see "Updates" below).
+- **0.5.0-coop.4 or 0.5.0-coop.5:** update the same way, then press **Settings > Run game setup / repair once**. Or
+  make a fresh install of 1.0.0 into a new folder (see "First-time setup") and copy your old folder's `data\save` into
+  the new folder's `data`, with the game closed.
 
 ## What you need
 
@@ -55,7 +60,7 @@ changed.
 
 ## First-time setup
 
-1. **Download** `WindWakerCOOP-PC-0.5.0-coop.6-windows-x86_64.zip` from the [Releases](../../releases) page. You do
+1. **Download** `WindWakerCOOP-PC-1.0.0-windows-x86_64.zip` from the [Releases](../../releases) page. You do
    not need the `-source.zip`: that is the source code.
 2. **Unzip** the whole zip into a new, empty folder of its own, for example `C:\Games\WindWakerCOOP`. Do not use
    `Program Files`, a network drive, or another release's folder.
@@ -87,7 +92,7 @@ the reason is shown. Your installation is never deleted.
 **Updating from 0.5.0-coop.4 or 0.5.0-coop.5: press Settings > Run game setup / repair once after the update.** The
 updater in those releases may skip rebuilding the game when your game files are inside the release folder. The launcher
 would then keep starting the old game, and hosts would refuse you as a "different game build". The repair rebuilds the
-game and keeps your saves. The updater in 0.5.0-coop.6 does not have this problem.
+game and keeps your saves. The updater from 0.5.0-coop.6 on does not have this problem.
 
 Prereleases (test builds, marked "Pre-release" on the Releases page) are never offered as updates.
 
@@ -228,40 +233,33 @@ as a **Debug** tab in the game's Settings. It acts on **your game only**:
 | The ping works, but the game gets no answer | The host's Windows Firewall is blocking the game. Go to Windows Security > Firewall & network protection > Allow an app through firewall > `Wind Waker HD.exe`, and tick **Private** and **Public**. Other security programs may need the same. Each release folder has its own `Wind Waker HD.exe`, so a new folder is asked about again. |
 | "Radmin VPN not found" in the launcher | Start Radmin VPN, join the network and wait a few seconds; the launcher looks again by itself. Check that the network adapter "Radmin VPN" is enabled. |
 | "This UDP port is already in use" (host) | Another copy of the game, or another program, uses UDP 7777. Close it, or host on another port such as 7778 and tell the friends to type `:7778`. |
-| "Different game build" / "different protocol" | Not everyone has the same release. Check **Install** tab > co-op release on every PC, and update everyone to 0.5.0-coop.6. |
+| "Different game build" / "different protocol" | Not everyone has the same release. Check **Install** tab > co-op release on every PC, and update everyone to the same release (1.0.0). |
 | "The host's game is full" | The host chose fewer players than are joining. |
 | It connects but looks jerky | Internet latency. A wired connection, and no big downloads in the background, help. |
 | Setup fails / the game does not start | Use **Settings > Run game setup / repair**. Check that your game is the USA Wii U version. Update your graphics driver. |
 
-## Known limitations (Public Alpha)
+## Known limitations (1.0.0)
 
-- **Untested on two real PCs:** carried objects, pigs, worldwide Teleport and Catch Up pass the project's automated
-  tests: two to three games on one PC, also over a simulated bad connection.
-- **Catch Up:**
-  - It replaces progress; it never merges.
-  - Nothing is offered when a player joins.
-  - It has not been tried with saves far into the story.
-- **Teleport:**
-  - Never into boss or mini-boss rooms, even after the boss is beaten.
-  - Not tried onto a player who is sailing.
+- **After the final credits,** the game may stay on the sailing scene without returning to the title screen or making
+  the Second Quest save. Close the game there; your saves from before the final battle are not affected.
+- **Testing:** 1.0.0 was tested with up to four players on one PC, in automated tests and in hands-on sessions through
+  every main boss. Play on separate PCs over the internet, and complete campaigns from start to finish, still need more
+  testing. Further fixes may come as updates.
+- **Bosses:** each player fights the boss in their own game. Hits, health, phases and the defeat are shared; the
+  boss's movement and attacks are not. Phantom Ganon's last encounter appears only if you own the Light Arrows when
+  you enter his room.
+- **Catch Up:** it replaces progress and never merges; nothing is offered when a player joins.
+- **Teleport:** never into boss or mini-boss rooms, even after the boss is beaten.
 - **Unstuck** cannot leave a scene that never ends.
-- **Enemies:**
-  - Shared enemies have been tested in Dragon Roost Cavern and in one Forsaken Fortress fight; elsewhere they are
-    untested.
-  - Enemy behaviour that starts when Link comes near follows the **host's** Link. For example, a Chuchu hanging from
-    the ceiling drops only when the host walks under it.
-  - In a joining player's game, an enemy can attack that player when the host's enemy is not attacking.
-  - Only Bokoblins, Chuchus and Moblins copy the host's animation exactly.
-- **Inventory:** no shared inventory. Only the player who opens a chest gets its item.
-- **Pickups:** if two players take the same rupee at once, the second gets it taken back. A duplicate heart or ammo
-  pickup is not taken back.
-- **Not shared:**
-  - shelves, tables and plants;
-  - a pig's anger;
-  - dishes being pushed;
-  - pressure switches (per player).
+- **Per player (not shared):**
+  - pressure switches;
+  - shelves, tables and plants, signs and bomb flowers;
+  - a pig's anger, dishes being pushed;
+  - refills, ammo and what is inside bags and bottles;
+  - other enemies' animations (Bokoblins, Chuchus, Moblins, Boko Babas and Octoroks are shared).
+- **Pickups:** two players cutting the same grass or lifting the same pot at the same moment can both get its drop. A
+  duplicate heart or ammo pickup is not taken back.
 - **Master Sword shine:** another player's Master Sword shine stays still while your own sword is put away.
-- **Testing:** long sessions and full dungeon runs with several players have had little testing.
 
 ## Reporting a bug
 
