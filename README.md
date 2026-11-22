@@ -12,7 +12,7 @@ others' Links, with their animations, equipment and tunic colour, and the world 
   own ending, heart container and exit;
 - carried and broken objects, pigs, cut grass and bushes.
 
-**v1.0.1 is the current release** (v1.0.0 was the first official one). It is not bug-free: back up your save, and
+**v1.0.2 is the current release** (v1.0.0 was the first official one). It is not bug-free: back up your save, and
 please report what you find (see "Reporting a bug").
 
 Downloads are on the **[Releases](../../releases)** page. This repository holds only this README, the license and the
@@ -22,23 +22,24 @@ release files. It contains no game.
 
 | Release | What it is | Co-op protocol |
 |---|---|---|
-| **1.0.1** | **The current release.** Fixes the co-op stutter, the Forsaken Fortress door and other enemy-death softlocks; keeps tunic colours; adds player names above each Link, Sync this room, Report stuck, Give an item, the Hero's Clothes, Enemy / Boss sync switches, Catch Up during cutscenes and the Go to warning. | **5** |
+| **1.0.2** | **The current release.** Asks the host before a joiner's old save changes the session; the sword taken at the Forsaken Fortress no longer comes back; pushed blocks slide and broken pots shatter for everyone; a quieter Stuck? list; every cutscene checked for softlocks. | **5** |
+| 1.0.1 | Fixes the co-op stutter, the Forsaken Fortress door and other enemy-death softlocks; keeps tunic colours; adds player names above each Link, Sync this room, Report stuck, Give an item, the Hero's Clothes, Enemy / Boss sync switches, Catch Up during cutscenes and the Go to warning. | 5 |
 | 1.0.0 | The first official release: every main boss synchronized up to Ganondorf, shared items and rupees, enemies fighting every player. | 5 |
 | 0.5.0-coop.6 (Public Alpha) | The last Alpha. Kept for history. | 5 |
 | 0.5.0-coop.5 (prerelease) | The test build of the second playtest. Kept for history. | 5 |
 | 0.5.0-coop.4 (Alpha) | The first public Alpha. Kept for history. | 4 |
 
 **Everyone in a game must use exactly the same release.** A different release is refused by the host as a
-"different game build", even when the protocol number is the same, as for 1.0.0 and 1.0.1. The launcher
+"different game build", even when the protocol number is the same, as for 1.0.1 and 1.0.2. The launcher
 shows the release and the protocol on its **Install** tab.
 
 **Already playing?**
-- **1.0.0:** open the launcher's **Updates** tab and press **Install**. Your game files, saves and settings stay
+- **1.0.1 or 1.0.0:** open the launcher's **Updates** tab and press **Install**. Your game files, saves and settings stay
   (see "Updates" below).
 - **0.5.0-coop.6:** open the launcher's **Updates** tab and press **Install**. Your game files, saves and settings stay
   (see "Updates" below).
 - **0.5.0-coop.4 or 0.5.0-coop.5:** update the same way, then press **Settings > Run game setup / repair once**. Or
-  make a fresh install of 1.0.1 into a new folder (see "First-time setup") and copy your old folder's `data\save` into
+  make a fresh install of 1.0.2 into a new folder (see "First-time setup") and copy your old folder's `data\save` into
   the new folder's `data`, with the game closed.
 
 ## What you need
@@ -63,7 +64,7 @@ changed.
 
 ## First-time setup
 
-1. **Download** `WindWakerCOOP-PC-1.0.1-windows-x86_64.zip` from the [Releases](../../releases) page. You do
+1. **Download** `WindWakerCOOP-PC-1.0.2-windows-x86_64.zip` from the [Releases](../../releases) page. You do
    not need the `-source.zip`: that is the source code.
 2. **Unzip** the whole zip into a new, empty folder of its own, for example `C:\Games\WindWakerCOOP`. Do not use
    `Program Files`, a network drive, or another release's folder.
@@ -245,11 +246,11 @@ as a **Debug** tab in the game's Settings. It acts on **your game only** (except
 | It connects but looks jerky | Internet latency. A wired connection, and no big downloads in the background, help. |
 | Setup fails / the game does not start | Use **Settings > Run game setup / repair**. Check that your game is the USA Wii U version. Update your graphics driver. |
 
-## Known limitations (1.0.1)
+## Known limitations (1.0.2)
 
 - **After the final credits,** the game may stay on the sailing scene without returning to the title screen or making
   the Second Quest save. Close the game there; your saves from before the final battle are not affected.
-- **Testing:** 1.0.1 was tested with up to four players on one PC, plus a four-player internet session with 1.0.0, in automated tests and in hands-on sessions through
+- **Testing:** 1.0.2 was tested with up to four players on one PC, plus internet sessions with 1.0.0 and 1.0.1, in automated tests and in hands-on sessions through
   every main boss. Play on separate PCs over the internet, and complete campaigns from start to finish, still need more
   testing. Further fixes may come as updates.
 - **Bosses:** each player fights the boss in their own game. Hits, health, phases and the defeat are shared; the
